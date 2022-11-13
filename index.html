@@ -11,42 +11,79 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 </head>
 
+<style>
+  .login {
+    background-color: white;
+    color: cornflowerblue;
+    padding: 0em 0.8em;
+    border: solid 2px;
+    border-radius: 40px;
+    width: 135px;
+    height: 50px;
+    text-align: center;
+    left: 76.21%;
+    right: 12.9%;
+    text-align: center;
+  }
+
+  .signup {
+    background-color: #e3f2fd;
+    border-radius: 40px;
+    width: 135px;
+    height: 50px;
+    text-align: center;
+    left: 76.21%;
+    right: 12.9%;
+    text-align: center;
+  }
+</style>
+
 <body>
   <header>
     <nav class="navbar navbar-expand-lg">
       <div class=" container-fluid">
-        <a class="navbar-brand" href="./index.html">Startup.io</a>
-        <img src="image/iconcar.png" style="width: 42px; height: 42px;">
+        <img src="image/menubuton.png" style="width: 50px; height: 50px; margin-top: 20px; margin-left: 90px;">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
           aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" style="margin-left: 747px;" id="navbarNavDropdown">
+        <div class="collapse navbar-collapse" style="margin-left: 400px; margin-top: 20px;" id="navbarNavDropdown">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active bg-dark text-white rounded" aria-current="page" href="index.html">Home</a>
+              <a class="nav-link text-primary" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="portfolio.html">Portfolio</a>
+              <a class="nav-link text-primary" href="#">Product</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="blog.html">Blog</a>
+              <a class="nav-link text-primary" href="#">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contactus.html">Contact Us</a>
+              <a class="nav-link text-primary" href="#">Contact</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">About Us</a>
+          </ul>
+        </div>
+        <div class="collapse navbar-collapse" style="margin-left: 160px; margin-top: 20px;" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item login">
+              <a class="nav-link text-primary" href="#">Login</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="todos.html">Todos</a>
+            <li class="nav-item signup" style="margin-left: 20px;">
+              <a class="nav-link text-primary" href="#">Sign Up</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
   </header>
-  <main></main>
+  <main>
+    <div class="container p-5 mt-5 rounded text-center" style="background-color: #e3f2fd ;">
+      <h1 class="mb-3">Sign up to our newsletter</h1>
+      <p id="contact-text" class="lead mb-3">Receive lates news, updates, discounts, and many other things every week
+      </p>
+
+    </div>
+  </main>
   <footer>
     <div class="container bg-light p-5 mt-5 rounded text-center">
       <h1 class="mb-3">Sign up to our newsletter</h1>

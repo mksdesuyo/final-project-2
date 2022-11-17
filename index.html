@@ -45,6 +45,13 @@
     text-align: center;
     text-decoration: none;
   }
+
+  .phone-card {
+    cursor: pointer;
+  }
+  .phone-card:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
 </style>
 
 <body>
@@ -217,7 +224,74 @@
       </div>
     </div>
 
-    <section class="bg-light">
+    <section>
+      <div class="container p-5 mt-5 rounded text-center border-bottom">
+        <div class="p-3">
+          <h1 class="mb-3">Promo Terbaru</h1>
+          <p class="fs-5 text-muted">Kita menawarkan harga yang kompetitif di pasar.</p>
+        </div>
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 mb-3">
+            <div class="col">
+              <div class="card mb-4 rounded-3 bg-light phone-card">
+                <div class="p-1">
+                  <img src="images/Reno8-Z-5G-specs.png" class="card-img-top" alt="Oddo Ranu8 Zet">
+                  <div class="card-body">
+                    <h5 class="card-title">Oddo Ranu8 Zet</h5>
+                    <p class="card-text"><strike class="text-muted">Rp3.999.000,00</strike> Rp2.999.000,00</p>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">Last updated <span class="updated"></span></small>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card mb-4 rounded-3 bg-light phone-card">
+                <div class="p-1">
+                  <img src="images/a96-pink-1920.png" class="card-img-top" alt="Oddo P69">
+                  <div class="card-body">
+                    <h5 class="card-title">Oddo P69</h5>
+                    <p class="card-text"><strike class="text-muted">Rp3.399.000,00</strike> Rp2.699.000,00</p>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">Last updated <span class="updated"></span></small>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card mb-4 rounded-3 bg-light phone-card">
+                <div class="p-1">
+                  <img src="images/Reno8-Z-5G-specs.png" class="card-img-top" alt="Oddo AK-17">
+                  <div class="card-body">
+                    <h5 class="card-title">Oddo AK-17</h5>
+                    <p class="card-text"><strike class="text-muted">Rp3.799.000,00</strike> Rp3.299.000,00</p>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">Last updated <span class="updated"></span></small>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card mb-4 rounded-3 bg-light phone-card">
+                <div class="p-1">
+                  <img src="images/f19-black-blue-1920.png" class="card-img-top" alt="Oddo Nanya">
+                  <div class="card-body">
+                    <h5 class="card-title">Oddo Nanya</h5>
+                    <p class="card-text"><strike class="text-muted">Rp6.899.000,00</strike> Rp6.199.000,00</p>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">Last updated <span class="updated"></span></small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <section class="bg-light" id="about">
       <div class="py-5 text-center container my-5">
         <div class="row py-lg-5">
           <div class="col-lg-6 col-md-8 mx-auto">
@@ -229,9 +303,9 @@
         </div>
       </div>
     </section>
-  
+
     <section>
-      <div class="container p-5 py-5 rounded-5 bg-light">
+      <div class="container p-5 py-5 rounded-5">
         <h2 class="mb-4 text-center">Mengenal CEOs Kami</h2>
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-4 g-3 py-5">
           <div class="col">
@@ -273,47 +347,6 @@
         </div>
       </div>
     </section>
-
-    <section>
-      <div class="container p-5 mt-5 rounded text-center">
-        <div class="p-3">
-          <h1 class="mb-3">Explore our simple pricing</h1>
-          <p class="fs-5 text-muted">We offer one of the most competitive prices on the market.</p>
-        </div>
-          <div class="row row-cols-1 row-cols-md-3 mb-3">
-            <div class="col">
-              <div class="card mb-4 rounded-5 bg-light">
-                <div class="card-body">
-                  <h4>Basic</h4>
-                  <h1 class="card-title">$9</h1>
-                  <h5 class="fw-light mb-3">Per month</h5>
-                  <button type="button" class="w-100 btn btn-lg rounded-5 text-dark bg-white">Learn more</button>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card mb-4 rounded-5">
-                <div class="card-body">
-                  <h4>Premium</h4>
-                  <h1 class="card-title">$29</h1>
-                  <h5 class="fw-light mb-3">Per month</h5>
-                  <button type="button" class="w-100 btn btn-lg btn-outline-secondary rounded-5 text-dark">Get Started</button>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card mb-4 rounded-5 bg-light">
-                <div class="card-body">
-                  <h4>Enterprise</h4>
-                  <h1 class="card-title">$129</h1>
-                  <h5 class="fw-light mb-3">Per month</h5>
-                  <button type="button" class="w-100 btn btn-lg rounded-5 text-dark bg-white">Learn more</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-    </section>
   </main>
   <footer>
     <div class="container bg-light p-5 mt-5 rounded-5 text-center" id="contact">
@@ -342,8 +375,8 @@
           <ul class="nav flex-column">
             <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Oddo Ranu 8 Series</a></li>
             <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Oddo P69</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Oddo AK-17</a></li>
             <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Oddo Nanya</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Oddo Sumatra</a></li>
           </ul>
         </div>
 
@@ -402,9 +435,19 @@
 
     paragraph.innerHTML = paragraph_after
 
-    const date = new Date();
-    const year = date.getFullYear();
-    document.getElementById('date').innerHTML = year;
+    const date = new Date()
+    const year = date.getFullYear()
+    document.getElementById('date').innerHTML = year
+
+    const updatedDate = new Date(document.lastModified)
+    const updatedDateText = updatedDate.getDate()
+    const updatedMonthText = updatedDate.getMonth()
+    const updatedYearText = updatedDate.getFullYear()
+    const updatedFullText = `${updatedDateText}/${updatedMonthText}/${updatedYearText}`
+    const updated = document.querySelectorAll(".updated")
+    for (let i = 0; i < updated.length; i++) {
+      updated[i].innerHTML = updatedFullText
+    }
   </script>
 </body>
 

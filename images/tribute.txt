@@ -11,3 +11,15 @@ a17k-bg.png
 
 f19-black-blue-1920.png
 (https://image.oppo.com/content/dam/oppo/product-asset-library/specs/beta/f19-black-blue-1920.png)
+
+Productimage-SunsetOrange-1775_1399-pc-v2.png
+(https://image.oppo.com/content/dam/oppo/product-asset-library/specs/reno7-4g/Productimage-SunsetOrange-1775_1399-pc-v2.png)
+
+a95-black-silver-1920.png
+(https://image.oppo.com/content/dam/oppo/product-asset-library/specs/a95/a95-black-silver-1920.png)
+
+A76-Product image-1920.png
+(https://image.oppo.com/content/dam/oppo/common/mkt/specs/a76/A76-Product%20image-1920.png)
+
+marvel-edition-1920-v1.png
+(https://image.oppo.com/content/dam/oppo/product-asset-library/specs/specs-marvel-edition/marvel-edition-1920-v1.png)

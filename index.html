@@ -6,7 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Final Project 2</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
   <link rel="stylesheet" href="src/styles/style.css">
   <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.6.9/sweetalert2.css">
@@ -135,7 +136,8 @@
           <h2 class="text-center">To the Future with Us</h2>
           <h3 class="mt-5">Experience every moment with oddo smart imaging</h3>
           <p class="mt-3 fs-5">
-            Imaging technology is an area to wich oddo is deeply committed. oddo has also continuedto explore new boundaries in smart imaging.
+            Imaging technology is an area to wich oddo is deeply committed. oddo has also continuedto explore new
+            boundaries in smart imaging.
           </p>
           <a href="#pricing" class="text-decoration-none">
             <h1 class="mt-3 text-success text-center letsgo">Let's GO!</h1>
@@ -339,7 +341,13 @@
                   <li>Akses sneak peak produk terbaru</li>
                   <li>Akses ke layanan servis</li>
                 </ul>
-                <button type="button" class="w-100 btn btn-lg btn-success rounded-5">Mulai Berlangganan</button>
+                <button type="button" class="w-100 btn btn-lg btn-success rounded-5" onclick="Swal.fire({
+                  position: 'center',
+                  icon: 'success',
+                  title: 'Berhasil berlangganan pro!',
+                  showConfirmButton: false,
+                  timer: 1500
+                });">Mulai Berlangganan</button>
               </div>
             </div>
           </div>
@@ -356,7 +364,13 @@
                   <li>Akses ke layanan servis</li>
                   <li>Pengguna prioritas</li>
                 </ul>
-                <button type="button" class="w-100 btn btn-lg btn-success rounded-5">Mulai Berlangganan</button>
+                <button type="button" class="w-100 btn btn-lg btn-success rounded-5" onclick="Swal.fire({
+                  position: 'center',
+                  icon: 'success',
+                  title: 'Berhasil berlangganan enterprise!',
+                  showConfirmButton: false,
+                  timer: 1500
+                });">Mulai Berlangganan</button>
               </div>
             </div>
           </div>
@@ -432,12 +446,19 @@
     <div id="contact" class="pt-1">
       <div class="container bg-white p-5 mt-5 rounded-5 text-center shadow-sm">
         <h1 class="mb-3">Mari tetap tehubung dengan Oddo</h1>
-        <p id="contact-text" class="lead mb-3">Dapatkan berita terbaru, pembaruan, diskon, dan lain-lain setiap minggunya.
+        <p id="contact-text" class="lead mb-3">Dapatkan berita terbaru, pembaruan, diskon, dan lain-lain setiap
+          minggunya.
         </p>
         <form class="input-group input-group-lg mb-3">
           <input type="text" class="form-control" placeholder="Masukkan akun email-mu" aria-label="User's email">
           <button class="btn btn-outline-secondary" type="button"><i class="bi bi-arrow-bar-right" width="20px"
-              height="20px"></i></button>
+              height="20px" onclick="Swal.fire({
+                position: 'center',
+                icon: 'success',
+                title: 'Alamat email berhasil terkirim!',
+                showConfirmButton: false,
+                timer: 1500
+              });"></i></button>
         </form>
       </div>
     </div>
@@ -683,7 +704,9 @@
     </div>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.6.9/sweetalert2.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.6.9/sweetalert2.all.js"></script>

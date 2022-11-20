@@ -12,9 +12,12 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.6.9/sweetalert2.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.6.9/sweetalert2.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.slim.min.map"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
 
 
 </head>
@@ -159,11 +162,17 @@
     text-decoration: none;
   }
 
+  .letsgo {
+    text-align: center;
+    text-decoration: none;
+  }
+
   .phone-card {
     cursor: pointer;
   }
 
-  .phone-card:hover, .profile-card:hover {
+  .phone-card:hover,
+  .profile-card:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   }
 
@@ -177,6 +186,54 @@
     width: 60px;
     background-color: #009b4c;
   }
+
+  .animate__animated.animate__lightSpeedOutRight {
+    --animate-duration: 1s;
+  }
+
+  #typing {
+    width: 0ch;
+    color: white;
+    float: left;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 5s steps(22) 1s infinite alternate;
+  }
+
+  #typing span {
+    color: #bc2a2a;
+  }
+
+  #line {
+    float: left;
+    color: white;
+    font-weight: bold;
+    font-size: 40px;
+    animation: crow 0.5s linear 0s infinite;
+  }
+
+  @keyframes typing {
+    from {
+      width: 0ch;
+    }
+
+    to {
+      width: 22ch;
+    }
+  }
+
+  @keyframes crow {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 0.4;
+    }
+  }
 </style>
 
 <body>
@@ -184,13 +241,13 @@
     <div class="container" id="navbar">
       <header
         class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
-        <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+        <a href="#navbar" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
           <img src="src/images/oddo.png" alt="" style="width: 100px; height: 30px;" class="mt-2">
         </a>
 
         <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-          <li><a href="/" class="nav-link px-2 link-secondary">Home</a></li>
-          <li><a href="#product" class="nav-link px-2 link-dark">Product</a></li>
+          <li><a href="#navbar" class="nav-link px-2 link-secondary">Home</a></li>
+          <li><a href="#produk" class="nav-link px-2 link-dark">Product</a></li>
           <li><a href="#about" class="nav-link px-2 link-dark">About</a></li>
           <li><a href="#contact" class="nav-link px-2 link-dark">Contact</a></li>
         </ul>
@@ -198,7 +255,8 @@
         <div class="col-md-3 text-end">
           <button type="button" class="btn btn-outline-primary me-2" data-bs-toggle="modal"
             data-bs-target="#exampleModal">Login</button>
-          <button type="button" class="btn btn-primary">Sign-up</button>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+            data-bs-target="#exampleModal2">Sign-up</button>
         </div>
       </header>
     </div>
@@ -209,13 +267,13 @@
         <div class="col">
           <h1>Oddo Official Website</h1>
           <h4>Inspiration Ahead Us</h4>
-          <p class="mt-3 mb-3">Smart and Connected</p>
-          <div id="page_wrap">
-            <div class="banner">
-              <div class="typed_wrap">
-                <h1>We Are <span class="typed"></span></h1>
-              </div>
-            </div>
+          <p class="mt-3">Smart and Connected</p>
+          <img src="src/images/mobil.png"
+            class="animate__animated animate__lightSpeedOutRight animate__infinite infinite" alt=""
+            style="width: 150px;">
+          <div>
+            <div id="typing">Faster than<span> Competitors</span></div>
+            <div id="line">|</div>
           </div>
         </div>
         <div class="col mb-3">
@@ -244,9 +302,9 @@
             </div>
           </div>
           <div class="container bg-light ms-0 rounded-4 d-flex flex-column"
-            style="width: 210px; height: 130px; margin-top: -115px;">
+            style="width: 210px; height: 150px; margin-top: -115px;">
             <img class="mt-1 mx-auto" src="src/images/garansi.png" style="width: 60px; height: 55px;">
-            <p class="">Jaminan garansi panjang pada setiap produk</p>
+            <p class="text-sm-center">Jaminan garansi panjang pada setiap produk</p>
           </div>
 
         </div>
@@ -257,33 +315,33 @@
     <div class="container col-xl-8 px-4 py-2">
       <div class="row flex-lg-row align-items-center g-5 py-5">
         <div class="col-12 col-sm-10 col-lg-7">
-          <div class="rounded-4 mt-2 p-2" style="background-color: #86eaae ;">
-            <div class="m-3 rounded-4" style="width:390px ; background-color: darkseagreen;">
+          <div class="rounded-4 mt-2 p-2" style="background-color: #00b94c ;">
+            <div class="m-3 rounded-4" style="width:auto ; background-color: darkseagreen;">
               <div class="d-flex">
                 <img src="src/images/chipset.jpg" class="p-2 rounded-4 mt-1" style="width: 220px; height: 160px;">
                 <div>
-                  <h5 class=" mt-3 text-center">Chipset Snapdragonfly kelas atas</h5>
-                  <p class="text-center">Performa ngebut dengan AnTuTu 1.000.000++</p>
+                  <h5 class=" mt-3 text-center">Snapdragonfly kelas atas</h5>
+                  <p class="text-center">Performa ngebut dengan skor AnTuTu 1 juta++</p>
                 </div>
               </div>
             </div>
-            <div class="m-3 rounded-4 d-flex" style="width:390px ; background-color: darkseagreen;">
+            <div class="m-3 rounded-4 d-flex" style="width:auto ; background-color: darkseagreen;">
               <div class="d-flex">
                 <div>
                   <h5 class="mt-3 text-center">Sensor terbaru dari Sorry</h5>
-                  <p class="text-center">Hasil kamera terbaik</p>
+                  <p class="text-center">Dengan OIS dan 100x zoom</p>
                 </div>
                 <div>
                   <img src="src/images/sensor.jpg" class="p-2 rounded-4 mt-1" style="width: 220px; height: 160px;">
                 </div>
               </div>
             </div>
-            <div class="m-3 rounded-4" style="width:390px ; background-color: darkseagreen;">
+            <div class="m-3 rounded-4" style="width:auto ; background-color: darkseagreen;">
               <div class="d-flex">
                 <img src="src/images/ram.jpg" class="p-2 rounded-4 mt-2" style="width: 220px; height: 160px;">
                 <div>
                   <h5 class="mt-3 text-center">Ram terbesar dikelasnya</h5>
-                  <p class="text-center">Multi tasking lebih lancar</p>
+                  <p class="text-center">Multi tasking lebih lancar tanpa crash</p>
                 </div>
               </div>
             </div>
@@ -294,16 +352,22 @@
           <h3 class="mt-5 ms-5">Experience every moment with oddo smart imaging</h3>
           <p class="mt-3 ms-5">Imaging technology is an area to wich oddo is deeply committed. oddo has also continued
             to explore new boundaries in smart imaging</p>
-          <h1 class="mt-3 ms-5 text-success text-center">Let's GO!</h1>
+          <a href="#produk">
+            <h1 class="mt-3 ms-5 text-success text-center letsgo">Let's GO!</h1>
+          </a>
         </div>
       </div>
     </div>
 
-    <div class="container p-5 mt-5 rounded" style="background-color: #86eaae ;">
+    <div class="container p-5 mt-5 rounded" style="background-color: #00b94c ;">
       <div class="row">
         <div class="col-4" style="margin-right: -25px;">
+          <div class="container rounded-4 d-flex align-items-center"
+            style="width: 350px; height: 125px; margin-top: 38px;">
+            <img class="mt-1 mx-auto rounded-2" src="src/images/hape.png" style="width: 220px; height: 200px;">
+          </div>
           <div class="container bg-light rounded-4 d-flex align-items-center ms-3"
-            style="width: 350px; height: 125px; margin-top: 310px;">
+            style="width: 350px; height: 125px; margin-top: 210px;">
             <img class="mt-1 mx-auto rounded-2" src="src/images/design.jpg" style="width: 110px; height: 90px;">
             <p class="my-auto ms-2">Design fresh setiap tahun</p>
           </div>
@@ -313,8 +377,8 @@
         </div>
         <div class="col mb-3">
           <div class="d-flex">
-            <div class="container bg-light mx-0 rounded-4 mt-auto" style="width: 80px; height: 70px;">
-              <img class="mx-auto mt-1 rounded-2" src="src/images/chipset2.jpg" style="width: 60px; height: 55px;">
+            <div class="container bg-light mx-0 rounded-4" style="width: 80px; height: 70px;">
+              <img class="mt-1 rounded-2" src="src/images/sirkuit.png" style="width: 60px; height: 55px;">
             </div>
             <div class="container bg-light rounded-4 d-flex align-items-center ms-3"
               style="width: 400px; height: 130px;">
@@ -323,7 +387,7 @@
             </div>
           </div>
           <div class="d-flex ">
-            <div class="container d-flex bg-light mx-0 rounded-4 d-flex flex-column mt-3 text-center"
+            <div class="container bg-light mx-0 rounded-4 d-flex flex-column mt-3 text-center"
               style="width: 320px; height: 200px;">
               <img class="mt-1 rounded-2 mx-auto " src="src/images/charging.jpg" style="width: 180px;">
               <p class="my-auto">Fast Charging Up to 120 Watt</p>
@@ -341,10 +405,15 @@
             <p class="mt-2 text-center">Dengan baterai yang lebih besar</p>
           </div>
 
-          <div class="container bg-light ms-0 rounded-4 d-flex flex-column mt-3"
-            style="width: 180px; height: 190px; margin-top: 13px;">
-            <img class="mt-2 mx-auto rounded-2" src="src/images/kaca.jpg" style="width: 150px; height: 100px;">
-            <p class="text-center">proteksi layar kingkong glass victus</p>
+          <div class="d-flex">
+            <div class="container bg-light ms-0 rounded-4 d-flex flex-column mt-3"
+              style="width: 180px; height: 190px; margin-top: 13px;">
+              <img class="mt-2 mx-auto rounded-2" src="src/images/kaca.jpg" style="width: 150px; height: 100px;">
+              <p class="text-center">proteksi layar kingkong glass victus</p>
+            </div>
+            <div class="rounded-4 d-flex align-items-center ms-5 mb-0" style="width: 400px; height: 125px;">
+              <img class="mx-auto rounded-2" src="src/images/pngegg.png" style="width: 390px; height: 250px;">
+            </div>
           </div>
         </div>
       </div>
@@ -353,14 +422,15 @@
     <section>
       <div class="container p-5 mt-5 rounded text-center border-bottom">
         <div class="p-3">
-          <h1 class="mb-3">Promo Terbaru</h1>
+          <h1 class="mb-3" id="produk">Promo Terbaru</h1>
           <p class="fs-5 text-muted">Kami menawarkan harga yang kompetitif di pasar.</p>
         </div>
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 mb-3">
           <div class="col">
             <div class="card mb-4 rounded-3 p-3 phone-card border-0">
               <div>
-                <img src="src/images/19151a63-6e83-4008-9a09-b53ae21735e0.jpg" class="card-img-top w-75" alt="Oddo Ranu8 Zet">
+                <img src="src/images/19151a63-6e83-4008-9a09-b53ae21735e0.jpg" class="card-img-top w-75"
+                  alt="Oddo Ranu8 Zet">
                 <div class="card-body">
                   <h5 class="card-title">Oddo Ranu8 Zet 5G</h5>
                   <p class="card-text"><strike class="text-muted">Rp3.999.000,00</strike> Rp2.999.000,00</p>
@@ -426,7 +496,8 @@
           <div class="col">
             <div class="card mb-4 rounded-3 p-3 phone-card border-0">
               <div>
-                <img src="src/images/mofi-flexi-slim-carbon-fibre-case-for-oppo-a76-brushed-red_m.jpg" class="card-img-top w-75" alt="Oddo P67">
+                <img src="src/images/mofi-flexi-slim-carbon-fibre-case-for-oppo-a76-brushed-red_m.jpg"
+                  class="card-img-top w-75" alt="Oddo P67">
                 <div class="card-body">
                   <h5 class="card-title">Oddo P67 + Red Case</h5>
                   <p class="card-text"><strike class="text-muted">Rp3.099.000,00</strike> Rp2.499.000,00</p>
@@ -549,7 +620,7 @@
           <div>
             <div class="col">
               <div class="card border-0 profile-card">
-                <img src="" class="card-img-top" alt="Naufal Asyraf" loading="lazy">
+                <img src="src/images/nama2.jpg" class="card-img-top" alt="Naufal Asyraf" loading="lazy">
                 <div class="card-body">
                   <h5 class="card-title">Naufal Asyraf</h5>
                   <ul>
@@ -576,7 +647,8 @@
     <div id="contact" class="pt-1">
       <div class="container bg-white p-5 mt-5 rounded-5 text-center shadow-sm">
         <h1 class="mb-3">Mari tetap tehubung dengan Oddo</h1>
-        <p id="contact-text" class="lead mb-3">Dapatkan berita terbaru, pembaruan, diskon, dan lain-lain setiap minggunya.
+        <p id="contact-text" class="lead mb-3">Dapatkan berita terbaru, pembaruan, diskon, dan lain-lain setiap
+          minggunya.
         </p>
         <form class="input-group input-group-lg mb-3">
           <input type="text" class="form-control" placeholder="Masukkan akun email-mu" aria-label="User's email">
@@ -602,7 +674,7 @@
               Base in Indonesia
             </p>
           </div>
-  
+
           <div class="col mb-3">
             <h5>Smartphone</h5>
             <ul class="nav flex-column">
@@ -616,7 +688,7 @@
               <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Oddo Ranu5 Marvel Edition</a></li>
             </ul>
           </div>
-  
+
           <div class="col mb-3">
             <h5>Produk</h5>
             <ul class="nav flex-column">
@@ -631,7 +703,7 @@
                     style="font-size: 12px">(Segera Hadir)</span></a></li>
             </ul>
           </div>
-  
+
           <div class="col mb-3">
             <h5>Tentang Kami</h5>
             <ul class="nav flex-column">
@@ -641,7 +713,7 @@
               <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Sejarah Karier</a></li>
             </ul>
           </div>
-  
+
           <div class="col mb-3">
             <h5>Dukungan</h5>
             <ul class="nav flex-column">
@@ -674,7 +746,7 @@
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Form Login</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Masuk</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -683,13 +755,13 @@
             <h2 class="text-center">Selamat Datang</h2>
             <div class="form-outline mb-4">
               <label class="form-label" for="form2Example1">Alamat Email</label>
-              <input type="email" id="form2Example1" class="form-control" />
+              <input type="email" id="form2Example1" class="form-control" placeholder="masukkan alamat email" />
             </div>
 
             <!-- Password input -->
             <div class="form-outline mb-4">
               <label class="form-label" for="form2Example2">Password</label>
-              <input type="password" id="form2Example2" class="form-control" />
+              <input type="password" id="form2Example2" class="form-control" placeholder="masukkan password" />
             </div>
 
             <!-- 2 column grid layout for inline styling -->
@@ -713,14 +785,15 @@
               class="btn btn-primary btn-block mb-4 rounded-5 w-100 text-center" onclick="Swal.fire({
                 position: 'center',
                 icon: 'success',
-                title: 'Your work has been saved',
+                title: 'Login berhasil!',
                 showConfirmButton: false,
                 timer: 1500
               });">Login</button>
 
             <!-- Register buttons -->
             <div class="text-center">
-              <p>Not a member? <a href="#!">Register</a></p>
+              <p>Not a member? <a href="#examplemodal2" data-bs-toggle="modal"
+                  data-bs-target="#exampleModal2">Register</a></p>
               <p>or sign up with:</p>
               <button type="button" class="btn btn-link btn-floating mx-1">
                 <i class="fab fa-facebook-f"></i>
@@ -742,7 +815,85 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
+
+  <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Buat Akun Baru</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <!-- Email input -->
+            <h2 class="text-center">Selamat Datang</h2>
+            <div class="form-outline mb-4">
+              <label class="form-label" for="form2Example1">Alamat Email</label>
+              <input type="email" id="form2Example1" class="form-control" placeholder="example123@oddo.com" />
+            </div>
+
+            <!-- Password input -->
+            <div class="form-outline mb-4">
+              <label class="form-label" for="form2Example2">Masukkan Password Baru</label>
+              <input type="password" id="form2Example2" class="form-control"
+                placeholder="minimal 6 karakter huruf besar dan kecil" />
+            </div>
+
+            <div class="form-outline mb-4">
+              <label class="form-label" for="form2Example2">Masukkan Password sekali lagi</label>
+              <input type="password" id="form2Example2" class="form-control" placeholder="******" />
+            </div>
+
+            <!-- 2 column grid layout for inline styling -->
+            <div class="row mb-4">
+              <div class="col d-flex justify-content-center">
+                <!-- Checkbox -->
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="form2Example31" checked />
+                  <label class="form-check-label" for="form2Example31"> Remember me </label>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Submit button -->
+            <button id="loginkan" type="button" data-bs-dismiss="modal"
+              class="btn btn-primary btn-block mb-4 rounded-5 w-100 text-center" onclick="Swal.fire({
+                position: 'center',
+                icon: 'success',
+                title: 'Akun Berhasil dibuat!',
+                showConfirmButton: false,
+                timer: 1500
+              });">Daftar</button>
+
+            <!-- Register buttons -->
+            <div class="text-center">
+              <p>or sign up with:</p>
+              <button type="button" class="btn btn-link btn-floating mx-1">
+                <i class="fab fa-facebook-f"></i>
+              </button>
+
+              <button type="button" class="btn btn-link btn-floating mx-1">
+                <i class="fab fa-google"></i>
+              </button>
+
+              <button type="button" class="btn btn-link btn-floating mx-1">
+                <i class="fab fa-twitter"></i>
+              </button>
+
+              <button type="button" class="btn btn-link btn-floating mx-1">
+                <i class="fab fa-github"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
@@ -755,6 +906,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.6.9/sweetalert2.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.6.9/sweetalert2.all.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.6.9/sweetalert2.all.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js"></script>
+
 
   <script>
     const paragraph = document.getElementById('contact-text')
@@ -778,41 +931,7 @@
       updated[i].innerHTML = updatedFullText
     }
 
-    $(function () {
-      $(".typed").typed({
-        strings: ["Developers.", "Designers.", "People."],
-        // Optionally use an HTML element to grab strings from (must wrap each string in a <p>)
-        stringsElement: null,
-        // typing speed
-        typeSpeed: 30,
-        // time before typing starts
-        startDelay: 1200,
-        // backspacing speed
-        backSpeed: 20,
-        // time before backspacing
-        backDelay: 500,
-        // loop
-        loop: true,
-        // false = infinite
-        loopCount: 5,
-        // show cursor
-        showCursor: false,
-        // character for cursor
-        cursorChar: "|",
-        // attribute to type (null == text)
-        attr: null,
-        // either html or text
-        contentType: 'html',
-        // call when done callback function
-        callback: function () { },
-        // starting callback function before each string
-        preStringTyped: function () { },
-        //callback for every typed string
-        onStringTyped: function () { },
-        // callback for reset
-        resetCallback: function () { }
-      });
-    });
+
   </script>
 </body>
 
